@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nick's Maintenance | Professional Property Renovations & Repairs Nationwide</title>
+  <meta name="description" content="Expert property maintenance, electrical, plumbing, painting, carpentry & renovations. Free quotes, affordable prices, nationwide service. Call 064 550 5722.">
+  <meta name="keywords" content="property maintenance, home renovations, electrical services, plumbing repairs, painting, carpentry, South Africa, nationwide, handyman, ceiling installation, tiling">
+  <meta name="author" content="Nick's Maintenance">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="ZA">
+  <meta name="geo.position" content="-28.479262;24.672713">
+  <meta name="ICBM" content="-28.479262, 24.672713">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Nick's Maintenance – Quality Work, Reliable Service">
+  <meta property="og:description" content="Professional property maintenance & renovations. Free quotes, skilled technicians, nationwide.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format">
+  <meta property="og:url" content="https://www.nicksmaintenance.co.za/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nick's Maintenance – Property Experts">
+  <meta name="twitter:description" content="Quality workmanship, free quotes, nationwide service.">
+  
+  <link rel="canonical" href="https://www.nicksmaintenance.co.za/">
+  <meta name="theme-color" content="#CA8A3A" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B2B3B" media="(prefers-color-scheme: dark)">
+  
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS Variables for Light & Dark Themes */
+    :root {
+      --bg-body: #ffffff;
+      --text-primary: #1E2A32;
+      --text-secondary: #2C3E50;
+      --card-bg: #ffffff;
+      --card-border: rgba(0, 0, 0, 0.03);
+      --section-bg: #F5F7FA;
+      --footer-bg: #0B1E28;
+      --footer-text: #CBD5E1;
+      --navbar-bg: rgba(255, 255, 255, 0.96);
+      --navbar-border: rgba(0, 0, 0, 0.05);
+      --primary-dark: #0B2B3B;
+      --primary-accent: #CA8A3A;
+      --primary-accent-light: #E9BC7A;
+      --accent-soft: #FEF5E8;
+      --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 20px 35px -8px rgba(0, 0, 0, 0.1);
+      --hero-overlay: linear-gradient(135deg, rgba(11,43,59,0.92), rgba(11,43,59,0.75));
+      --input-border: #E2E8F0;
+      --btn-primary-hover: #b5722a;
+    }
+
+    body.dark {
+      --bg-body: #0F172A;
+      --text-primary: #EDF2F7;
+      --text-secondary: #CBD5E1;
+      --card-bg: #1E293B;
+      --card-border: rgba(255, 255, 255, 0.05);
+      --section-bg: #111827;
+      --footer-bg: #020617;
+      --footer-text: #94A3B8;
+      --navbar-bg: rgba(15, 23, 42, 0.96);
+      --navbar-border: rgba(255, 255, 255, 0.05);
+      --primary-dark: #CA8A3A;
+      --accent-soft: #2D2A1E;
+      --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 20px 35px -8px rgba(0, 0, 0, 0.5);
+      --hero-overlay: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(15,23,42,0.9));
+      --input-border: #334155;
+      --btn-primary-hover: #e09d3e;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      scroll-behavior: smooth;
+      line-height: 1.5;
+      transition: background 0.25s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--navbar-bg);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--navbar-border);
+      transition: background 0.2s;
+    }
+
+    .logo h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .logo span {
+      font-weight: 400;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--primary-accent);
+      display: block;
+      line-height: 1.2;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary-accent);
+    }
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--primary-accent);
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-accent);
+      transition: 0.2s;
+    }
+    .theme-toggle:hover {
+      background: var(--primary-accent);
+      color: #1E2A32;
+    }
+    .btn-outline {
+      border: 1.5px solid var(--primary-accent);
+      background: transparent;
+      padding: 0.5rem 1.3rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      color: var(--primary-accent);
+      transition: all 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--primary-accent);
+      color: #1E2A32;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--hero-overlay), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&auto=format');
+      background-size: cover;
+      background-position: center 35%;
+      padding: 5rem 0 6rem;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-size: 1.4rem;
+      font-weight: 500;
+      border-left: 4px solid var(--primary-accent);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+    }
+    .btn-primary {
+      background: var(--primary-accent);
+      padding: 0.9rem 2rem;
+      border-radius: 2.5rem;
+      font-weight: 700;
+      border: none;
+      color: #1E2A32;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--btn-primary-hover);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      padding: 0.9rem 2rem;
+      border-radius: 2.5rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nationwide-badge {
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      border-radius: 2rem;
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 3px;
+      background: var(--primary-accent);
+      margin-top: 0.5rem;
+    }
+    .section-subhead {
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    /* Cards */
+    .services-grid, .why-grid, .more-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .service-card, .why-card, .more-card {
+      background: var(--card-bg);
+      padding: 2rem 1.5rem;
+      border-radius: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--card-border);
+      transition: all 0.3s;
+    }
+    .service-card:hover, .why-card:hover, .more-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-accent-light);
+    }
+    .service-icon {
+      font-size: 2.8rem;
+      color: var(--primary-accent);
+      margin-bottom: 1rem;
+    }
+    .why-card i, .more-card i {
+      font-size: 2rem;
+      background: var(--accent-soft);
+      padding: 0.7rem;
+      border-radius: 60px;
+      color: var(--primary-accent);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    /* Premium banner */
+    .premium-banner {
+      background: linear-gradient(105deg, #0F2C38 0%, #1F4A5A 100%);
+      border-radius: 2rem;
+      padding: 3rem 2.5rem;
+      margin: 2rem 0;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .premium-banner h3 {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .premium-badge {
+      background: var(--primary-accent);
+      padding: 0.7rem 1.8rem;
+      border-radius: 3rem;
+      font-weight: 800;
+      color: #1E2A32;
+    }
+    .cta-section {
+      background: var(--section-bg);
+      border-radius: 2rem;
+      text-align: center;
+      padding: 3rem 2rem;
+      transition: background 0.2s;
+    }
+    .cta-phone a {
+      color: var(--primary-accent);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      transition: 0.2s;
+    }
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .contact-info {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      border: 1px solid var(--card-border);
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail i {
+      width: 2rem;
+      color: var(--primary-accent);
+      font-size: 1.4rem;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--input-border);
+      border-radius: 1rem;
+      background: var(--bg-body);
+      color: var(--text-primary);
+      font-family: inherit;
+    }
+    .contact-form button {
+      background: var(--primary-dark);
+      border: none;
+      padding: 0.9rem;
+      width: 100%;
+      border-radius: 2rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      .navbar { flex-direction: column; gap: 1rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .hero h1 { font-size: 2.5rem; }
+      .container { padding: 0 1.5rem; }
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .premium-banner { flex-direction: column; text-align: center; }
+      .cta-phone a { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <h1>NICK'S<span>MAINTENANCE</span></h1>
+      <span>QUALITY WORK. RELIABLE SERVICE.</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#quote" class="btn-outline">Free Quote</a>
+      <button class="theme-toggle" id="darkModeToggle" aria-label="Dark/Light mode"><i class="fas fa-moon"></i> <span>Dark</span></button>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Professional Property Maintenance & Renovations</h1>
+      <div class="hero-tagline">Your Trusted Partner For A Better, Smarter Home.</div>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#contact" class="btn-primary"><i class="fas fa-tools"></i> Request Free Estimate</a>
+        <a href="tel:0645505722" class="btn-secondary"><i class="fas fa-phone-alt"></i> Call Now</a>
+      </div>
+      <div class="nationwide-badge"><i class="fas fa-map-marker-alt"></i> SERVING NATION WIDE — Wherever you are, we’re ready to help!</div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="section-subhead">Comprehensive solutions for every corner of your property — residential or commercial.</div>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon"><i class="fas fa-home"></i></div><h3>General Property Maintenance</h3><p>Routine upkeep, inspections, and preventive care to keep your asset flawless.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fas fa-bolt"></i></div><h3>Electrical & Plumbing</h3><p>Certified repairs, installations, and emergency fixes for safe, efficient systems.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fas fa-paint-roller"></i></div><h3>Painting & Finishing</h3><p>Interior & exterior painting, wall finishes, and premium protective coatings.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fas fa-cube"></i></div><h3>Carpentry & Built-in Installations</h3><p>Custom shelving, cabinetry, wardrobes, and fine wood craftsmanship.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" style="background: var(--section-bg);">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="section-subhead">Exceptional service, transparent process, and results that speak for themselves.</div>
+      <div class="why-grid">
+        <div class="why-card"><i class="fas fa-user-check"></i><h3>Reliable & Skilled Technicians</h3><p>Background-checked pros with years of field expertise.</p></div>
+        <div class="why-card"><i class="fas fa-stopwatch"></i><h3>Fast Turnaround Time</h3><p>Same-day responses & project efficiency without compromising quality.</p></div>
+        <div class="why-card"><i class="fas fa-tags"></i><h3>Affordable & Transparent Pricing</h3><p>Upfront quotes, no hidden fees — fair rates for premium service.</p></div>
+        <div class="why-card"><i class="fas fa-medal"></i><h3>Quality Guaranteed Workmanship</h3><p>Warranty-backed finishes that stand the test of time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Certificates & Expertise</h2>
+      <div class="section-subhead">Specialised skills that go beyond basics — fully certified and trusted.</div>
+      <div class="more-grid">
+        <div class="more-card"><i class="fas fa-drafting-compass"></i><h3>Renovations & Upgrades</h3><p>Full kitchen, bathroom, and living space transformations.</p></div>
+        <div class="more-card"><i class="fas fa-couch"></i><h3>Furniture Assembly & Installations</h3><p>IKEA, custom furniture, wall mounting — done right.</p></div>
+        <div class="more-card"><i class="fas fa-border-all"></i><h3>Ceiling, Tiling & Partitioning</h3><p>Drop ceilings, ceramic tiling, drywall partitioning & more.</p></div>
+        <div class="more-card"><i class="fas fa-comments"></i><h3>And Much More! Just Ask.</h3><p>Custom requests & specialty repairs — no job too small or big.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="premium-banner">
+      <div>
+        <h3><i class="fas fa-gem"></i> EXPERT WORKMANSHIP</h3>
+        <p>Finishes that last — meticulous attention to every detail.</p>
+      </div>
+      <div class="premium-badge"><i class="fas fa-wallet"></i> AFFORDABLE PRICES • FREE QUOTATIONS</div>
+    </div>
+  </div>
+
+  <section id="quote" class="container" style="padding-top: 1rem;">
+    <div class="cta-section">
+      <i class="fas fa-phone-volume" style="font-size: 2.5rem; color: var(--primary-accent);"></i>
+      <h2 style="font-size: 1.9rem; margin-top: 0.5rem;">Ready for flawless maintenance?</h2>
+      <p style="font-size: 1.2rem;">CALL OR WHATSAPP NOW FOR A FREE QUOTE!</p>
+      <div class="cta-phone"><a href="tel:0645505722">064 550 5722</a>  |  <a href="mailto:lufunonicholas@gmail.com">lufunonicholas@gmail.com</a></div>
+      <a href="https://wa.me/27645505722?text=Hello%20Nick's%20Maintenance%2C%20I%20need%20a%20free%20quote%20for%20property%20maintenance" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      <p style="margin-top: 1rem;"><i class="fas fa-shield-alt"></i> Nationwide service — we come to you, wherever you are.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Request a detailed estimate</h2>
+      <div class="section-subhead">Fill out the form or reach out directly — free, no-obligation quotes within 24h.</div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-headset"></i> Talk to a specialist</h3>
+          <div class="contact-detail"><i class="fas fa-phone-alt"></i> <div><strong>Phone / WhatsApp</strong><br>064 550 5722</div></div>
+          <div class="contact-detail"><i class="fas fa-envelope"></i> <div><strong>Email</strong><br>lufunonicholas@gmail.com</div></div>
+          <div class="contact-detail"><i class="fas fa-clock"></i> <div><strong>Response time</strong><br>On time. Every time. 24/7 support</div></div>
+          <div class="contact-detail"><i class="fas fa-check-circle"></i> <div><strong>Quality Guarantee</strong><br>Your satisfaction is our priority</div></div>
+        </div>
+        <div class="contact-form">
+          <form id="quoteRequestForm">
+            <input type="text" placeholder="Full name" id="fullName" required>
+            <input type="email" placeholder="Email address" id="emailAddr" required>
+            <input type="tel" placeholder="Phone number (optional)">
+            <textarea rows="4" placeholder="Tell us about your maintenance or renovation needs..."></textarea>
+            <button type="submit" id="submitBtn"><i class="fas fa-paper-plane"></i> Send free quote request</button>
+          </form>
+          <p style="margin-top: 1rem; text-align:center; font-size:0.85rem;"><i class="fas fa-globe-africa"></i> Serving across South Africa & beyond — nationwide support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div style="font-size: 1.8rem; font-weight: 600; font-family: 'Playfair Display';">NICK'S MAINTENANCE</div>
+      <p>QUALITY WORK. RELIABLE SERVICE. | PROFESSIONAL PROPERTY MAINTENANCE & RENOVATIONS</p>
+      <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0;">
+        <span><i class="fas fa-check-circle"></i> ON TIME. EVERY TIME.</span>
+        <span><i class="fas fa-star-of-life"></i> YOUR SATISFACTION IS OUR PRIORITY.</span>
+      </div>
+      <div class="footer-quote">“Expert workmanship finishes that last — affordable, reliable, premium.”</div>
+      <hr style="opacity: 0.2; margin: 1.5rem 0;">
+      <p>© 2025 Nick's Maintenance — Nationwide property solutions | <a href="mailto:lufunonicholas@gmail.com" style="color:#E9BC7A;">lufunonicholas@gmail.com</a> | 📞 064 550 5722</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nick's Maintenance",
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600",
+    "telephone": "+642645505722",
+    "email": "lufunonicholas@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+    "areaServed": "South Africa",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 08:00-18:00",
+    "serviceType": ["Property Maintenance", "Electrical", "Plumbing", "Painting", "Carpentry", "Renovations"],
+    "sameAs": ["https://wa.me/27645505722"]
+  }
+  </script>
+
+  <script>
+    // Dark/Light mode toggle with system preference + localStorage
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const icon = toggleBtn.querySelector('i');
+    const span = toggleBtn.querySelector('span');
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        if (icon) icon.className = 'fas fa-sun';
+        if (span) span.innerText = ' Light';
+      } else {
+        body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        if (icon) icon.className = 'fas fa-moon';
+        if (span) span.innerText = ' Dark';
+      }
+    }
+
+    // Check saved preference or system
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    // Contact form handler
+    const form = document.getElementById('quoteRequestForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('emailAddr').value.trim();
+      if (name === '' || email === '') {
+        alert('Please enter your name and email to request a free quote.');
+        return;
+      }
+      alert(`✨ Thank you ${name}! Your quote request has been sent. We'll reply within 24h via email or WhatsApp. ✨`);
+      form.reset();
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

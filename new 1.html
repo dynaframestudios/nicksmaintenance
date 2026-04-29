@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DynaFrame Studios | Midrand & Braamfontein</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #FF6B35;
+            --secondary-orange: #FF8E53;
+            --white: #FFFFFF;
+            --black: #222222;
+            --dark-gray: #333333;
+            --light-gray: #F5F5F5;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--black); background-color: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-graphic { width: 45px; height: 45px; background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%); border-radius: 10px; position: relative; display: flex; align-items: center; justify-content: center; }
+        .logo-graphic::before { content: ""; position: absolute; width: 22px; height: 22px; border: 2px solid var(--white); border-radius: 5px; transform: rotate(45deg); }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: var(--black); letter-spacing: -0.02em; }
+        .logo-text span { color: var(--primary-orange); }
+        .navbar { background: var(--white); box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-link { text-decoration: none; color: var(--black); font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover, .nav-link.active { color: var(--primary-orange); }
+        
+        .page-hero { background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: var(--white); padding: 140px 0 80px; text-align: center; margin-top: 70px; }
+        .page-hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .student-banner { background: linear-gradient(135deg, #FF6B35, #FF8E53); color: white; padding: 10px 20px; border-radius: 40px; display: inline-block; margin: 15px 0; }
+        
+        .btn { display: inline-block; padding: 12px 30px; border-radius: 40px; text-decoration: none; font-weight: 600; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary-orange); color: var(--white); }
+        .btn-primary:hover { background: var(--secondary-orange); transform: translateY(-2px); }
+        
+        .contact-content { padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-info { padding: 20px; }
+        .contact-method { display: flex; align-items: center; margin-bottom: 35px; }
+        .contact-icon { font-size: 2rem; width: 60px; height: 60px; background: var(--light-gray); border-radius: 60px; display: flex; align-items: center; justify-content: center; margin-right: 20px; color: var(--primary-orange); }
+        .contact-details h3 { margin-bottom: 5px; font-size: 1.2rem; }
+        
+        .contact-form { background: var(--light-gray); padding: 40px; border-radius: 24px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-orange); box-shadow: 0 0 0 3px rgba(255,107,53,0.1); }
+        .form-group textarea { height: 120px; resize: vertical; }
+        
+        .footer { background: var(--dark-gray); color: var(--white); padding: 50px 0 20px; margin-top: 50px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-graphic"></div>
+                <div class="logo-text">Dyna<span>Frame</span></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="web-design.html" class="nav-link">Web Design</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="pc-builds.html" class="nav-link">PC Builds</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Let's Talk</h1>
+            <p>Get a free quote or schedule a consultation</p>
+            <div class="student-banner">
+                <i class="fas fa-graduation-cap"></i> Students: 10% OFF all services
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 style="font-size: 2rem; margin-bottom: 30px;">Get In Touch</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info.dynaframestudios@gmail.com</p>
+                            <p>Response within 2 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+27 75 402 4178 (Midrand)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>Service Areas</h3>
+                            <p>Midrand • Braamfontein • Surrounding Areas</p>
+                            <p>On-site & remote services available</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/info.dynaframestudios@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form - DynaFrame Studios">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://dynaframe-studios.surge.sh/thank-you.html">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select Service</option>
+                                <option value="web-design">Web Design</option>
+                                <option value="pc-builds">PC Builds</option>
+                                <option value="repairs">Device Repairs</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project or issue..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="student" value="yes"> I am a student (10% discount)
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DynaFrame Studios</h3>
+                    <p>Your trusted tech partner in Midrand and Braamfontein.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="web-design.html">Web Design</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pc-builds.html">PC Builds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info.dynaframestudios@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +27 75 402 4178</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DynaFrame Studios, a subsidiary of Paladin's Dynasty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will respond within 2 hours.');
+            this.submit();
+        });
+    </script>
+    
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68ec91b77e32cc195255b3de/1j7e1idgv';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+</body>
+</html>
